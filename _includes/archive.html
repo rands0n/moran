@@ -1,6 +1,6 @@
 {% for post in paginator.posts %}
     <article class="post-excerpt">
-        <h2 class="post-title"><a href="{{ post.url }}">{{ post.title  }}</a></h2>
+        <h2 class="post-title"><a href="{{ post.url | prepend: site.url }}">{{ post.title  }}</a></h2>
         <section>
             <p>
                 <time class="post-date" datetime="{{ post.date }}">{{ post.date | date: "%B %-d, %Y" }}</time>
