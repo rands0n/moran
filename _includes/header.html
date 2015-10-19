@@ -17,7 +17,7 @@
     <meta property="og:site_name" content="{{ site.title }}">
     <meta property="og:url" content="{{ page.url | prepend: site.url }}">
     <meta property="og:type" content="blog">
-    <meta property="og:image" content="/images/image.jpg">
+    <meta property="og:image" content="{{ site.url }}/images/image.jpg">
     <meta property="og:description" content="{{ site.description }}">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -26,7 +26,7 @@
     <![endif]-->
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="/images/favicon.png">
+    <link rel="shortcut icon" href="{{ site.url }}/images/favicon.png">
 
     <!-- Fonts -->
     <script src="//use.typekit.net/iqs3otp.js"></script>
@@ -36,15 +36,15 @@
     <link rel="alternate" type="application/rss+xml" href="/feed/index.xml">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="{{ site.url }}/css/styles.css">
 </head>
 <body>
     <header class="site-header text-center">
-        <h1 class="page-title blog-title"><a href="/">{{ site.title }}</a></h1>
+        <h1 class="page-title blog-title"><a href="{{ site.url }}">{{ site.title }}</a></h1>
         <div class="blog-description faded">{{ site.description }}</div>
         <nav class="main-nav">
-            <a href="/about">About</a>
-            <a href="/projects">Projects</a>
+            <a href="{{ site.url }}/about">About</a>
+            <a href="{{ site.url }}/projects">Projects</a>
         </nav>
     </header>
 
