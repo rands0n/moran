@@ -1,0 +1,23 @@
+.pagination {
+    position: relative;
+    text-align: center;
+}
+
+.newer-posts,
+.older-posts {
+    position: absolute;
+    white-space: pre; // prevents line break
+}
+
+.newer-posts {
+    left: 0;
+}
+.older-posts {
+    right: 0;
+}
+
+.page-number {
+    @media screen and (max-width: $breakpoint) {
+        display: none;
+    }
+}

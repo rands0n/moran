@@ -1,0 +1,284 @@
+* {
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+    box-sizing: border-box;
+}
+
+*:before, *:after {
+    box-sizing: border-box;
+}
+
+
+
+/* Typography
+====================================== */
+
+$font-size: 95%;
+$mobile-font-size: 88%;
+$line-height: 1.76;
+$font-weight: 300;
+$bold-weight: 600;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 500;
+    line-height: 1.4;
+    margin: $margin-small 0;
+    color: $header-color;
+    font-feature-settings: 'liga';
+    font-variant-ligatures: common-ligatures;
+    color: #333;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0.6em 0;
+
+    .post & {
+        margin-top: 0;
+    }
+}
+
+h2 {
+    font-weight: 300;
+    margin: 0.7em 0;
+    font-size: 1.8em;
+
+    .post-excerpt & {
+        margin-top: 0;
+    }
+}
+
+h3 {
+    font-size: 1.4em;
+}
+
+h4 {
+    font-size: 1.2em;
+}
+
+h5 {
+    font-size: 1em;
+}
+
+h6 {
+    font-size: 0.9em;
+}
+
+/* html/body
+====================================== */
+::selection {
+  background: #e9f1f7; /* WebKit/Blink Browsers */
+}
+
+::-moz-selection {
+  background: #e9f1f7; /* Gecko Browsers */
+}
+
+html {
+    height: 100%;
+    max-height: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html,
+a {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    position: relative;
+    height: 100%;
+    max-height: 100%;
+    line-height: $line-height;
+    color: $primary-dark;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: 'kern';
+    font-kerning: normal;
+
+    @media screen and (max-device-width: 480px) {
+        text-rendering: optimizeSpeed;
+    }
+
+    @media screen and (max-width: $breakpoint) {
+        font-size: $mobile-font-size;
+    }
+}
+
+
+
+/* General
+====================================== */
+a {
+    color: $scratch-blue;
+    text-decoration: none;
+    @include link-hover();
+    &:active,
+    &:focus {
+        outline-style: none;
+        -moz-outline-style: none;
+    }
+}
+
+blockquote {
+    margin: $margin-medium $margin-large;
+
+    @media screen and (max-width: $breakpoint) {
+        margin: $margin-medium $margin-small;
+    }
+
+    clear: both;
+    font-style: italic;
+    p:first-child,
+    p:last-child {
+        margin: 0;
+    }
+
+    color: $header-color;
+}
+
+cite {
+    display: block;
+    margin-top: 0.8em;
+    font-style: normal;
+    font-size: 80%;
+    text-align: right;
+
+    &:before {
+        opacity: 0.5;
+        content: '\2014\20';
+    }
+}
+
+hr {
+    height: 2px;
+    width: 40px;
+    margin: $margin-large auto;
+    border: 0;
+    background: $scratch-blue;
+
+    @media screen and (max-width: $breakpoint) {
+        margin: $margin-large auto;
+    }
+}
+
+iframe {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+p {
+    margin: $margin-small 0;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    margin: $margin-medium auto;
+}
+
+table {
+    max-width: 100%;
+    margin: $margin-medium auto;
+    border-collapse: collapse;
+    font-size: 90%;
+    text-align: left;
+}
+
+thead {
+    border-bottom: 1px solid $highlight;
+}
+
+th,td {
+    padding: 0.6em;
+}
+
+th {
+    font-weight: 400;
+}
+
+tbody tr {
+
+    &:not(:last-child) {
+        border-bottom: 1px solid $highlight;
+    }
+}
+
+// code
+code,
+code *,
+pre,
+pre * {
+    word-wrap: normal;
+}
+
+code {
+    @include monospace();
+    color: $header-color;
+}
+
+pre {
+    @include monospace();
+    margin: $margin-medium 0;
+    padding-left: $margin-large;
+
+    @media screen and (max-width: $breakpoint) {
+        padding-left: $margin-small;
+    }
+
+    overflow: auto;
+    white-space: pre;
+    line-height: 1.6;
+    opacity: 0.8;
+
+    &.wrap-text code {
+        white-space: pre-wrap;
+    }
+}
+
+strong, b {
+    font-weight: $bold-weight;
+}
+
+ul,ol {
+    margin: $margin-medium 0;
+    padding-left: 1.5em;
+
+    ul,ol {
+        margin: 0.38em 0;
+        padding-left: $margin-large;
+    }
+}
+
+ol {
+    list-style: decimal outside;
+}
+
+ul {
+    list-style: none;
+
+    > li {
+        position: relative;
+
+        &:before {
+            position: absolute;
+            left: -$margin-small;
+            content: '\2013';
+        }
+    }
+}

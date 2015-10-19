@@ -1,0 +1,24 @@
+.site-header {
+    padding: 8em 0;
+}
+
+.blog-title {
+    margin: 0;
+    margin-bottom: 0.3em;
+    font-size: 1.8em;
+    a { color: $header-color; }
+    a:hover { color: $scratch-blue; }
+    &:after,
+    &:before {
+        font-size: 0.84em;
+    }
+    &:after { content: '\a0\b7'; }
+    &:before { content: '\b7\a0'; }
+}
+
+.main-nav {
+    margin-top: 0.66em;
+    a {
+        padding: 0 6px;
+    }
+}

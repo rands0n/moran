@@ -1,0 +1,24 @@
+.site-footer {
+    padding-top: 6em;
+    padding-bottom: 4em;
+    color: $header-color;
+    a { color: $header-color; }
+    a:hover { color: $scratch-blue; }
+}
+
+.social {
+    font-size: 1.1em;
+    a {
+        display: inline-block;
+        padding: 10px 14px;
+        transition: color 0.2s;
+        &:hover {
+            color: $scratch-blue;
+        }
+    }
+}
+
+.copyright {
+    margin-top: 1em;
+    font-size: 90%;
+}

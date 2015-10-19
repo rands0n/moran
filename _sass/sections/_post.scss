@@ -1,0 +1,12 @@
+.post-excerpt {
+    margin-top: 4em;
+    margin-bottom: 4.5em;
+
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+.post-meta {
+    margin-bottom: 20px;
+}

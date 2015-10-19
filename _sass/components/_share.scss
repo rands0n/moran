@@ -1,0 +1,22 @@
+.share {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    background-color: #f4f2f0;
+    align-items: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 3em 0 0 0;
+    padding: .1em 1em;
+
+    img {
+        margin-right: 10px;
+    }
+
+    p {
+        font-size: 15.3px;
+        margin: 15px 10px
+    }
+}

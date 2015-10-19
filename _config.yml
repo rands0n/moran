@@ -1,0 +1,21 @@
+title: "Your name here"
+email: "email@domain.com"
+description: "Description for Blog"
+username: username
+
+baseurl: "/"
+url: "http://example.com"
+
+# paginate
+paginate: 5
+paginate_path: /page/:num
+
+# permalink
+permalink: :title
+
+# sass
+sass:
+    style: :compressed
+
+# Build settings
+markdown: kramdown
