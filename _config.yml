@@ -4,7 +4,7 @@ description: "Description for Blog"
 username: username
 
 baseurl: "/"
-url: "http://randsonjs.github.io/moran"
+url: "http://rands0n.github.io/moran"
 
 # paginate
 paginate: 5
