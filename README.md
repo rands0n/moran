@@ -21,7 +21,7 @@ $ gem install jekyll --no-ri --no-doc
 3. Now clone the project:
 
 ```sh
-$ git clone git@github.com:randsonjs/moran.git
+$ git clone git@github.com:rands0n/moran.git
 ```
 
 4. Navigate to the project folder:
